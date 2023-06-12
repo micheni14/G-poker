@@ -4,7 +4,7 @@ import hero from "../assets/hero.jpeg"
 function Hero() {
 return (
     <div>
-    <div className='md: h-[100vh] bg-black 'id="/">
+    <div className='md: h-full bg-black 'id="/">
         <img src={hero} alt="" />
     </div>
     </div>
