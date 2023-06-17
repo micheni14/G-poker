@@ -80,7 +80,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-10}
             >
-                Features
+                Contact
             </Link>
             </li>
         </ul>
@@ -96,7 +96,7 @@ const Navbar = () => {
         </div>
     
                     </div>
-                    <div className="md:hidden block z-30 text-slate-500"
+                    <div className="md:hidden block z-30 text-black"
             onClick={() => setsidebar(!sidebar)} 
             >
             {" "}
@@ -114,7 +114,7 @@ const Navbar = () => {
             </div>
             <div className={
                 sidebar
-                    ? "bg-slate-800 h-full w-[80%] z-20 fixed top-0 md:hidden " 
+                    ? "bg-yellow-800 h-full w-[80%] z-20 fixed top-0 md:hidden " 
                     : "h-full w-full fixed top-0 hidden"
             }
             >   
@@ -125,14 +125,11 @@ const Navbar = () => {
             <div className=
                     " w-[85%] mx-auto text-white font-medium text-xl">
                     <div className=' flex justify-between'>
-                        <div><img src="" alt="logo" className="text-white" /></div>
+                        <div><p>G-poker</p></div>
                         <div className=''
                             onClick={() => setsidebar(!sidebar)} 
                         >
-                            
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-12 h-12">
-<path fillRule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clipRule="evenodd" />
-</svg>
+                    
 
 
                         </div>
@@ -159,98 +156,14 @@ const Navbar = () => {
                 smooth={true}
                 offset={-10}
             >
-                About us
+                About 
             </Link>
             </li>
             <li className="cursor-pointer">
             <Link
             onClick={() => setsidebar(!sidebar)} 
                 activeClass="active"
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={-10}
-            >
-            projects
-            </Link>
-                    </li>
-            <li className="cursor-pointer">
-            <Link
-            onClick={() => setsidebar(!sidebar)} 
-                activeClass="active"
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-10}
-            >
-                Features
-            </Link>
-                        </li>
-                        
-        </ul>
-        <div>
-            
-        </div>
-        </div>
-    
-                </div>
-        
-            </div>
-            <div className={
-                sidebar
-                    ? "bg-yellow-600 h-full w-[80%] z-20 fixed top-0 md:hidden " 
-                    : "h-full w-full fixed top-0 hidden"
-            }
-            >   
-                
-        {/* <div>
-    <img src="" alt="logo" className="text-white" />
-        </div> */}
-            <div className=
-                    " w-[85%] mx-auto text-white font-medium text-xl">
-                    <div className=' flex justify-between'>
-                    <p>G-poker</p>
-                        <div className=''
-                            onClick={() => setsidebar(!sidebar)} 
-                        >
-                            
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-12 h-12">
-<path fillRule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clipRule="evenodd" />
-</svg>
-
-
-                        </div>
-                    </div>
-        <ul className="flex  flex-col space-y-8 text-center ">
-            <li className="cursor-pointer">
-            <Link
-            onClick={() => setsidebar(!sidebar)} 
-                activeClass="active"
-                to="/"
-                spy={true}
-                smooth={true}
-                offset={-10}
-            >
-                Home
-            </Link>
-            </li>
-            <li className="cursor-pointer">
-            <Link
-            onClick={() => setsidebar(!sidebar)} 
-                activeClass="active"
-                to="About us"
-                spy={true}
-                smooth={true}
-                offset={-10}
-            >
-                About Game
-            </Link>
-            </li>
-            <li className="cursor-pointer">
-            <Link
-            onClick={() => setsidebar(!sidebar)} 
-                activeClass="active"
-                to="projects"
+                to="Tournaments"
                 spy={true}
                 smooth={true}
                 offset={-10}
@@ -267,25 +180,24 @@ const Navbar = () => {
                 smooth={true}
                 offset={-10}
             >
-                Contact
+                contact
             </Link>
                         </li>
-                    
+                        
         </ul>
         <div>
             
         </div>
         </div>
-        </div>
+    
+                </div>
+        
+            </div>
+        
         
 
     
             </div>
-        
-        
-      
-    
-    
 );
 };
 

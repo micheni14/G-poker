@@ -1,120 +1,156 @@
-    import React from "react";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image1 from "../assets/Image1.jpeg"
 
-    const Tabs = ({ color }) => {
-    const [openTab, setOpenTab] = React.useState(1);
-    return (
-        <>
-        <div className="flex flex-wrap" id="tournaments">
-            <div className="w-full">
-            <ul
-                className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
-                role="tablist"
-            >
-                <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                <a
-                    className={
-                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                    (openTab === 1
-                        ? "text-white bg-" + color + "-600"
-                        : "text-" + color + "-600 bg-white")
-                    }
-                    onClick={e => {
-                    e.preventDefault();
-                    setOpenTab(1);
-                    }}
-                    data-toggle="tab"
-                    href="#link1"
-                    role="tablist"
-                >
-                    Tournaments
-                </a>
-                </li>
-                <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                <a
-                    className={
-                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                    (openTab === 2
-                        ? "text-white bg-" + color + "-600"
-                        : "text-" + color + "-600 bg-white")
-                    }
-                    onClick={e => {
-                    e.preventDefault();
-                    setOpenTab(2);
-                    }}
-                    data-toggle="tab"
-                    href="#link2"
-                    role="tablist"
-                >
-                    Table
-                </a>
-                </li>
-                <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                <a
-                    className={
-                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                    (openTab === 3
-                        ? "text-white bg-" + color + "-600"
-                        : "text-" + color + "-600 bg-white")
-                    }
-                    onClick={e => {
-                    e.preventDefault();
-                    setOpenTab(3);
-                    }}
-                    data-toggle="tab"
-                    href="#link3"
-                    role="tablist"
-                >
-                    players
-                </a>
-                </li>
-            </ul>
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6">
-                <div className="px-4 py-5 flex-auto">
-                <div className="tab-content tab-space">
-                    <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                    <p>
-                        Collaboratively administrate empowered markets via
-                        plug-and-play networks. Dynamically procrastinate B2C users
-                        after installed base benefits.
-                        <br />
-                        <br /> Dramatically visualize customer directed convergence
-                        without revolutionary ROI.
-                    </p>
-                    </div>
-                    <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                    <p>
-                        Completely synergize resource taxing relationships via
-                        premier niche markets. Professionally cultivate one-to-one
-                        customer service with robust ideas.
-                        <br />
-                        <br />
-                        Dynamically innovate resource-leveling customer service for
-                        state of the art customer service.
-                    </p>
-                    </div>
-                    <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                    <p>
-                        Efficiently unleash cross-media information without
-                        cross-media value. Quickly maximize timely deliverables for
-                        real-time schemas.
-                        <br />
-                        <br /> Dramatically maintain clicks-and-mortar solutions
-                        without functional solutions.
-                    </p>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </>
-    );
-    };
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import "./styles.css";
+
+// import required modules
+import { Pagination, Navigation, } from "swiper";
 
     export default function Tournaments() {
-    return (
+        return (
+            <div className="h-[50vh] bg-slate-100">
+            <div className=" flex flex-col md:flex-row pt-10  " id= "projects">
         <>
-        <Tabs color="pink" />;
-        </>
+        <Swiper
+            slidesPerView={1}
+            spaceBetween={10}
+            navigation={true}
+            pagination={{
+            clickable: true,
+            }}
+            breakpoints={{
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+            },
+            }}
+                modules={[Pagination, Navigation]}
+            className="mySwiper"
+        >
+        <SwiperSlide className="">
+                <div className="flex flex-col justify-center relative  ">
+                                {/* <div className="absolute  h-full w-full flex justify-center items-center">
+                                    <p className="absolute text-2xl text-white bottom-54 ">Mech-connectt</p>
+                                    <p className="absolute text-lg text-white bottom-36">Lorem ipsum dolor sit amet.</p>
+                            <button className="bg-slate-500 py-3 px-7 rounded-md mt-48 ">Click  Me</button>
+                        
+                                </div> */}
+                                
+                    <img src={Image1} alt="your browser doesnt support this image" />
+                    </div>
+                    
+            </SwiperSlide>
+                <SwiperSlide>
+                    
+                <div className="flex flex-col justify-center relative">
+                    
+                                {/* <div className="absolute  h-full w-full flex justify-center items-center">
+                                <p className="absolute text-2xl text-white bottom-54 ">Mech-connectt</p>
+                                    <p className="absolute text-lg text-white bottom-36">Lorem ipsum dolor sit amet.</p>
+                            <button className="bg-slate-500 hover:bg-red-500  py-3 px-7 rounded-md mt-48">Click  Me</button>
+                        
+                        </div> */}
+                    <img src={Image1} alt="your browser doesnt support this image" />
+                    </div>
+            </SwiperSlide>
+                <SwiperSlide>
+                <div className="flex flex-col justify-center relative">
+                                {/* <div className="absolute  h-full w-full flex justify-center items-center">
+                                <p className="absolute text-2xl text-white bottom-54">Mech-connectt</p>
+                                    <p className="absolute text-lg text-white bottom-36">Lorem ipsum dolor sit amet.</p>
+                            <button className="bg-slate-500 hover:bg-red-500 py-3 px-7 rounded-md mt-48">Click  Me</button>
+                        
+                        </div> */}
+                    <img src={Image1} alt="your browser doesnt support this image" />
+                    </div>
+            </SwiperSlide>
+                <SwiperSlide>
+                <div className="flex flex-col justify-center relative">
+                                {/* <div className="absolute  h-full w-full flex justify-center items-center">
+                                <p className="absolute text-2xl text-white bottom-54 ">Mech-connectt</p>
+                                    <p className="absolute text-lg text-white bottom-36">Lorem ipsum dolor sit amet.</p>
+                            <button className="bg-slate-500 hover:bg-red-500 py-3 px-7 rounded-md mt-48">Click  Me</button>
+                        
+                        </div> */}
+                    <img src={Image1} alt="your browser doesnt support this image" />
+                    </div>
+            </SwiperSlide>
+                <SwiperSlide>
+                <div className="flex flex-col justify-center relative">
+                                {/* <div className="absolute  h-full w-full flex justify-center items-center">
+                                <p className="absolute text-2xl text-white bottom-54 ">Mech-connectt</p>
+                                    <p className="absolute text-lg text-white bottom-36">Lorem ipsum dolor sit amet.</p>
+                            <button className="bg-slate-500 hover:bg-red-500 py-3 px-7 rounded-md mt-48">Click  Me</button>
+                        
+                        </div> */}
+                    <img src={Image1} alt="your browser doesnt support this image" />
+                    </div>
+            </SwiperSlide>
+                <SwiperSlide>
+                            <div className="flex flex-col justify-center relative">
+                                
+                        {/* <div className="absolute  h-full w-full flex justify-center items-center">
+                        <p className="absolute text-2xl text-white bottom-54 ">Mech-connectt</p>
+                                    <p className="absolute text-lg text-white bottom-36">Lorem ipsum dolor sit amet.</p>
+                            <button className="bg-slate-500 hover:bg-red-500 py-3 px-7 rounded-md mt-48">Click  Me</button>
+                        
+                        </div> */}
+                    <img src={Image1} alt="your browser doesnt support this image" />
+                    </div>
+            </SwiperSlide>
+                <SwiperSlide>
+                <div className="flex flex-col justify-center relative">
+                                {/* <div className="absolute  h-full w-full flex justify-center items-center">
+                                <p className="absolute text-2xl text-white bottom-54">Mech-connectt</p>
+                                    <p className="absolute text-lg text-white bottom-36">Lorem ipsum dolor sit amet.</p>
+                            <button className="bg-slate-500 py-3 px-7 rounded-md mt-48">Click  Me</button>
+                        
+                        </div> */}
+                    <img src={Image1} alt="your browser doesnt support this image" />
+                    </div>
+            </SwiperSlide>
+                <SwiperSlide>
+                <div className="flex flex-col justify-center relative">
+                                {/* <div className="absolute  h-full w-full flex justify-center items-center">
+                                <p className="absolute text-2xl text-white bottom-54 ">Mech-connectt</p>
+                                    <p className="absolute text-lg text-white bottom-36">Lorem ipsum dolor sit amet.</p>
+                            <button className="bg-slate-500 py-3 px-7 rounded-md mt-48">Click  Me</button>
+                        
+                        </div> */}
+                    <img src={Image1} alt="your browser doesnt support this image" />
+                    </div>
+            </SwiperSlide>
+                <SwiperSlide>
+                <div className="flex flex-col justify-center relative">
+                                {/* <div className="absolute  h-full w-full flex justify-center items-center">
+                                <p className="absolute text-2xl text-white bottom-54 ">Mech-connectt</p>
+                                    <p className="absolute text-lg text-white bottom-36">Lorem ipsum dolor sit amet.</p>
+                            <button className="bg-slate-500 py-3 px-7 rounded-md mt-48">Click  Me</button>
+                        
+                        </div> */}
+                    <img src={Image1} alt="your browser doesnt support this image" />
+                            </div>
+                            
+            </SwiperSlide>
+        </Swiper>
+        
+                </>
+                </div>
+                </div>
     );
     }

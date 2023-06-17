@@ -1,22 +1,21 @@
     import React from "react";
-import image1 from "../assets/image.avif"
     const Subhero = () => {
     return (
         <div className="bg-green-800 md:py-16 py-8">
         <div className="w-mobile md:w-medium mx-auto  grid md:grid-cols-2 justify-center   items-center relative h-[300px]">
-            <div className="space-y-5">
+            <div className="space-y-5 px-10 text-white">
             <h2 className="text-4xl font-bold">
                 Play Online poker
             </h2>
-            <p>
-            Get the ultimate exprience by play G-poker
+            <p className="text-4xl font-bold"> 
+            Get the ultimate exprience by playing G-poker
             </p>
             <div>
                 <a
                 target="_blank"
                 href="https://play.google.com/store/search?q=mech+connect&c=apps"
                 >
-                <button className="px-14 py-3 bg-my_yellow text-yellow-600 rounded-full  flex space-x-5">
+                <button className=" py-3 bg-my_yellow text-yellow-600 rounded-full  flex space-x-5">
                     <span className="text-2xl" >Download game</span>
                     <span>
                     <svg

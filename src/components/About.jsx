@@ -1,19 +1,29 @@
 import React from 'react'
-
+import { GiCard2Spades } from 'react-icons/gi';
+import { FaBitcoin } from 'react-icons/fa';
+import { FaCoins} from 'react-icons/fa';
 
 function About() {
 return (
     <div>
-     <div className="bg-gray-800 py-20 relative z-10 h-[60vh] flex justify-center items-center" id ="About us">
-            <div className="w-mobile md:w-medium mx-auto items-center">
-                <p className='text-4xl text-white flex justify-center text-center'> About Us</p>
-                <div className='text-2xl text-white flex justify-center text-center'>
-                    
-                    <p className='italic m-1'>
-                    If passion burns in you, and luck is your middle name, you have chosen the right place to satisfy your desires and win…
-                    </p>
-                
+    <div className="bg-neutral-950 p-4 z-10 h-[60vh] " id ="About us">
+            <div className="w-mobile box shadow-2xl  mx-auto ">
+                <ul>
+                <div className=' text-white p-4 '>
+                        <div className='pb-8  flex items-center'>
+                            <GiCard2Spades fontSize={28} />
+                            <p className='p-4 font-semibold'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                        <div className='pb-8 flex items-center'>
+                    <FaBitcoin  fontSize={28}/>
+                            <p className='p-4 font-semibold'> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                        <div className='pb-8 flex items-center'>
+                            <FaCoins fontSize={28} />
+                            <p className='p-4 font-semibold'> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            </div>
             </div>
+            </ul>
             <div>
             </div>
         </div>
