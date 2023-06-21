@@ -17,6 +17,7 @@
                 >
                 <button className=" py-3 bg-my_yellow text-yellow-600 rounded-full  flex space-x-5">
                     <span className="text-2xl" >Download game</span>
+                     
                     <span>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
