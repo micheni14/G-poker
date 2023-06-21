@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image1 from "../assets/Image1.jpeg"
+import Image1 from "../assets/image1.jpeg"
 
 // Import Swiper styles
 import "swiper/css";
